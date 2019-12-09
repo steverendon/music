@@ -1,0 +1,40 @@
+ion-content{
+    --background: var(--ion-color-success);
+}
+.swiper-slide {
+    display: block;
+    margin-bottom: 64px;
+    background-color: white;
+}
+
+ion-slides{
+    background-color: white;
+    height: 100%;
+    max-width: 800px;
+}
+
+ion-slide > h1,h2{
+    color: var(--ion-color-primary);
+}
+
+ion-slide > p{
+    font-size: 22px;
+    padding: 1em 1em 1em 1em;
+}
+
+ion-slide > ion-icon{
+    color: #abd16e;
+    font-size: 48px;
+}
+
+ion-slide > ion-icon[name="close"]{
+    float: right;
+    color: var(--ion-color-success);
+    font-size: 40px;
+}
+
+ion-slide > img{
+    max-height: 50%;
+    max-width: 60%;
+    margin: 64px auto;
+}

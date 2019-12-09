@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sport</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <agm-map *ngIf="currentCenter"
+  [latitude]="currentCenter.lat" 
+  [longitude]="currentCenter.lng"
+  [zoom]="defaultZoom">
+  <agm-marker *ngIf="currentCenter"
+  [latitude]="currentCenter.lat" 
+  [longitude]="currentCenter.lng"
+  iconUrl="https://static.platzi.com/media/tmp/class-files/git/ionic/ionic-22a6536fdd63e1df165af062d039d1fe3e36bd7e/src/assets/img/bicycle.png"
+  ></agm-marker>
+  <agm-polyline [strokeColor]="'red'" *ngIf="coordinates">
+    <agm-polyline-point *ngFor="let coords of coordinates" [latitude]="coords.lat" [longitude]="coords.lng">
+    </agm-polyline-point>
+  </agm-polyline>
+</agm-map>
+
+</ion-content>
